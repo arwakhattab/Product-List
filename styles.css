@@ -253,7 +253,8 @@ body {
     color: var(--main-text-color);
 }
 
-.confirm-btn {
+.confirm-btn,
+.popup-box button {
     width: 80%;
     margin: 10%;
     background: var(--accent-color);
@@ -272,7 +273,8 @@ body {
     padding: 5%;
 }
 
-.confirm-btn:hover {
+.confirm-btn:hover,
+.popup-box button:hover {
     background-color: var(--secondary-button-color);
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
@@ -341,4 +343,134 @@ body {
     color: var(--main-text-color);
     border: 1px solid var(--main-text-color);
     transition: all 0.2s ease-in-out;
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 35%;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.popup-header h1 {
+    color: var(--main-text-color);
+}
+
+.popup-header p {
+    color: var(--secondary-text-color);
+    margin-top: -5%;
+}
+
+.products-ordered {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    background-color: var(--background-color);
+    border-radius: 20px;
+}
+
+.receipt-card {
+    height: 100%;
+    margin: 3% 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--extra-button-color);
+    padding-bottom: 5%;
+}
+
+.receipt-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5%;
+    width: 80%;
+}
+
+.receipt-entry img {
+    object-fit: cover;
+    border-radius: 5%;
+    display: block;
+}
+
+.receipt-entry-price {
+    color: var(--main-text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.receipt-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.receipt-total-title {
+    color: var(--main-text-color);
+    font-weight: 500;
+}
+
+.receipt-total-price {
+    font-size: 1.3rem;
+    color: var(--main-text-color);
+    font-weight: 800;
+}
+
+.receipt-product-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.receipt-product-name {
+    font-size: 1.1rem;
+    color: var(--main-text-color);
+    font-weight: 600;
+    padding-bottom: 10%;
+}
+
+.receipt-count-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.receipt-product-amount {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-right: 20%;
+}
+
+.receipt-product-unit-price {
+    /* width: 70%; */
+    color: var(--extra-button-color);
+    font-weight: 600;
+    margin-right: 10%;
 }

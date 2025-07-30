@@ -164,3 +164,54 @@ function updateCartUI() {
     cartQuantity.textContent = totalQty;
     cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
 }
+
+const popup = document.getElementById("simplePopup");
+const closeBtn = document.getElementById("closeSimplePopup");
+
+function showConfirmationPopup() {
+    const productsContainer = document.querySelector(".products-ordered");
+    productsContainer.innerHTML = "";
+
+    let total = 0;
+
+    Object.values(cartItems).forEach((item) => {
+        const productTotal = (item.price * item.quantity).toFixed(2);
+        total += parseFloat(productTotal);
+
+        const productHTML = `
+        <div class="receipt-card">
+            <div class="receipt-entry">
+                <img src="${item.image.thumbnail}" alt="${item.name}" />
+                <div class="receipt-product-details">
+                    <span class="receipt-product-name">${item.name}</span>
+                    <div class="receipt-count-price">
+                        <span class="receipt-product-amount">${item.quantity}x</span>
+                        <span class="receipt-product-unit-price">@$${item.price.toFixed(
+                            2
+                        )}</span>
+                    </div>
+                </div>
+            </div>
+            <span class="receipt-entry-price">$${productTotal}</span>
+        </div>
+    `;
+
+        productsContainer.insertAdjacentHTML("beforeend", productHTML);
+    });
+
+    const totalHTML = `
+    <div class="receipt-total">
+      <span class="receipt-total-title">Order Total</span>
+      <span class="receipt-total-price">$${total.toFixed(2)}</span>
+    </div>
+  `;
+    productsContainer.insertAdjacentHTML("beforeend", totalHTML);
+
+    document.getElementById("simplePopup").style.display = "flex";
+}
+
+document.getElementById("confirmOrder").addEventListener("click", showConfirmationPopup);
+
+document.getElementById("startNewOrder").addEventListener("click", () => {
+    location.reload();
+});
