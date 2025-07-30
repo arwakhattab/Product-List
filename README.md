@@ -1,20 +1,15 @@
 # Frontend Mentor - Product list with cart solution
 
-This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d), implemented for Task 1 of the Konecta Full Stack summer intership.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d), implemented for Task 1 of the Konecta Full Stack summer internship.
 
 ## Table of contents
 
 -   [Overview](#overview)
     -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
+    -   [Screenshots](#screenshot)
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
-    -   [Continued development](#continued-development)
-    -   [Useful resources](#useful-resources)
--   [Author](#author)
--   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,7 +24,7 @@ Users should be able to:
 -   View the optimal layout for the interface depending on their device's screen size
 -   See hover and focus states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
 ![Product list with an empty cart](screenshots/cart-empty.png)
 ![Product list with some products in the cart](screenshots/cart-full.png)
